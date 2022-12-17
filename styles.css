@@ -1,0 +1,185 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft_magenta: hsl(300, 69%, 71%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+/* Make images easier to work with */
+img,
+picture {
+  width: 100%;
+  display: block;
+}
+
+body {
+  background-image: url(images/bg-mobile.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--violet);
+  color: #fff;
+  padding: 2.11rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  text-align: center;
+}
+
+.logo {
+  width: 8rem;
+  margin-bottom: 3.5rem;
+}
+
+section h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin: 3rem 0 1rem 0;
+}
+
+.btn {
+  border: none;
+  padding: 0.6rem 4rem;
+  border-radius: 2.5rem;
+  color: var(--violet);
+  font-size: 0.8rem;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 15%);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+
+/* SOCIAL MEDIA ICONS */
+.social-icon {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.social-icon span {  /* SELECTING ALL SPAN ELEMENT THAT ARE CHILD OF social-icon*/
+  display: flex;
+  border: 1px solid;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  border-radius: 50%;
+  height: 30px;
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top:1rem;
+}
+
+.attribution a {
+  color: var(--soft_magenta);
+}
+
+@media screen and (min-width:578px) {  /*FOR DESKTOP SIZE*/
+  body {
+    background-image: url(images/bg-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  section {
+    flex: 0 1 auto;
+    width: 50%;
+    max-width: 686px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  section:nth-child(2) {
+    text-align: left;
+    align-items: flex-start;
+    padding-left:4rem;
+  }
+
+  .logo img {
+    width: clamp(10rem, 15vw, 15rem);
+  }
+
+  section > h1 {
+    font-size: clamp(1.5rem, 3.2vw, 3rem);
+  }
+
+  section p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+  }
+
+  .btn {
+    width: 200px;
+    height: 50px;
+    max-width: 250px;
+    max-height: 60px;
+    margin-left: 0;
+    transition: background-color 400ms ease-in-out;
+  }
+
+  .btn:hover {   /* HOVER EFFECT */
+      cursor: pointer;
+      background-color: var(--soft_magenta);
+      color: #fff;
+      font-weight: bold;
+  }
+
+  /* FOOTER SECTION & ICON HOVER */
+    footer {
+      width: 100%;
+      max-width: 1372.5px;
+      margin: 0 auto;
+    }
+  .social-icon {
+    justify-content: flex-end;
+  }
+
+  .social-icon span {
+    width: 35px;
+    height: 35px;
+    transition: color 400ms ease-in-out;
+  }
+
+  .social-icon span:hover {
+    color: var(--soft_magenta);
+    cursor: pointer;
+    
+  }
+
+  footer > p.attribution {
+    text-align: right;
+  }
+
+}
