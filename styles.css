@@ -106,6 +106,7 @@ section h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 4rem;
   }
 
   main {
@@ -125,10 +126,10 @@ section h1 {
   section:nth-child(2) {
     text-align: left;
     align-items: flex-start;
-    padding-left:4rem;
+    padding-left:3rem;
   }
 
-  .logo img {
+  .logo {
     width: clamp(10rem, 15vw, 15rem);
   }
 
@@ -137,15 +138,14 @@ section h1 {
   }
 
   section p {
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: clamp(1rem, 2vw, 1.1rem);
   }
 
   .btn {
-    width: 200px;
+    width: clamp(10rem, 14vw, 15rem);
     height: 50px;
-    max-width: 250px;
-    max-height: 60px;
     margin-left: 0;
+    padding: 0;
     transition: background-color 400ms ease-in-out;
   }
 
@@ -164,6 +164,7 @@ section h1 {
     }
   .social-icon {
     justify-content: flex-end;
+    padding-right:1rem;
   }
 
   .social-icon span {
@@ -175,11 +176,17 @@ section h1 {
   .social-icon span:hover {
     color: var(--soft_magenta);
     cursor: pointer;
-    
+
   }
 
   footer > p.attribution {
     text-align: right;
   }
 
+}
+
+@media  screen and (min-width:1024px) {
+    section > p {
+      width: 83%;
+    }
 }
